@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Comic_Marvel</string>
+    <string name="login_title">Welcome to the Marvel HQ\'s</string>
+    <string name="hint_email">Email Address</string>
+    <string name="hint_login_password">Password</string>
+    <string name="hint_login_email">Email Address</string>
+    <string name="hint_login_pass">Password</string>
+    <string name="login_create_account">Create account</string>
+    <string name="ckb_login_remember">Remember</string>
+</resources>
