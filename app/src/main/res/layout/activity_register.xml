@@ -7,11 +7,60 @@
     android:layout_height="match_parent"
     android:background="#00162C">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EA2427"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/register_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            app:layout_constraintStar_toStartOf="parent"
+            app:layout_contraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="45dp"
+            android:text="Register"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStar_toEndOf="@+id/register_arrow"
+            app:layout_contraintTop_toTopOf="parent"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/circule_external"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="406.10dp"
+            android:background="@drawable/shape_oval"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:src="@drawable/icon_register"
+        app:layout_constraintTop_toTopOf="@+id/circule_external"
+        app:layout_constraintEnd_toEndOf="@+id/circule_external"
+        app:layout_constraintStart_toStartOf="@+id/circule_external"
+        app:layout_constraintBottom_toBottomOf="@+id/circule_external"/>
+
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/card_external_login"
+        android:id="@+id/card_external_register"
         android:layout_width="370dp"
         android:layout_height="390dp"
-        android:layout_marginTop="185dp"
+        android:layout_marginTop="250dp"
         app:cardBackgroundColor="#EA2427"
         app:cardCornerRadius="15dp"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,20 +72,24 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/tv_register_title"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="27sp"
-                android:layout_marginTop="25dp"
-                android:gravity="center_horizontal|center_vertical"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                app:layout_constraintTop_toTopOf="parent"
+            <ImageView
+                android:id="@+id/circule_internal"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginBottom="315dp"
+                android:background="@drawable/shape_oval"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                android:text="@string/login_title" />
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <ImageView
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/icon_register"
+                app:layout_constraintTop_toTopOf="@+id/circule_internal"
+                app:layout_constraintEnd_toEndOf="@+id/circule_internal"
+                app:layout_constraintStart_toStartOf="@+id/circule_internal"
+                app:layout_constraintBottom_toBottomOf="@+id/circule_internal"/>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layout_internal_register"
@@ -57,7 +110,7 @@
                     app:layout_constraintStart_toStartOf="parent" >
 
                     <com.google.android.material.textfield.TextInputLayout
-                        android:id="@+id/til_email_register"
+                        android:id="@+id/til_name_register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
@@ -68,6 +121,29 @@
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/tiet_register_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/name_register"
+                            android:inputType="textWebEmailAddress"
+                            android:maxLines="1" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/til_email_register"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_marginTop="100dp"
+                        android:textColorHint="@color/black"
+                        app:boxBackgroundColor="@android:color/transparent"
+                        app:errorTextColor="@color/white"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/til_name_register">
 
                         <com.google.android.material.textfield.TextInputEditText
                             android:id="@+id/tiet_register_email"
@@ -84,13 +160,13 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="100dp"
+                        android:layout_marginTop="170dp"
                         android:textColorHint="@color/black"
                         app:boxBackgroundColor="@android:color/transparent"
                         app:errorTextColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottom="@id/til_login_email"
+                        app:layout_constraintTop_toBottom="@id/til_email_register"
                         app:passwordToggleEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
@@ -103,49 +179,18 @@
 
                     </com.google.android.material.textfield.TextInputLayout>
 
-                    <CheckBox
-                        android:id="@+id/ckb_login"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_marginStart="10dp"
-                        android:layout_marginTop="40dp"
-                        android:checked="true"
-                        app:buttonTint="#FFEA2427"
-                        android:textColor="#FF47525E"
-                        app:layout_constraintTop_toBottomOf="@id/til_register_password"
-                        app:layout_constraintStart_toStart="parent"
-                        android:text="@string/ckb_login_remember"/>
-
                     <com.google.android.material.button.MaterialButton
                         android:id="@+id/bt_save_register"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"
-                        android:layout_marginTop="210dp"
+                        android:layout_marginTop="250dp"
                         android:backgroundTint="#EA2427"
                         android:padding="0dp"
-                        android:text="@string/login"
+                        android:text="@string/register_save"
                         app:cornerRadius="3dp"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintTop_toBottomOf="@+id/til_register_password" />
-
-                    <Button
-                        android:id="@+id/bt_create_register"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="110dp"
-                        android:layout_marginTop="260dp"
-                        android:background="@android:color/transparent"
-                        android:gravity="right"
-                        android:padding="0dp"
-                        android:text="@string/login_create_account"
-                        android:textAllCaps="false"
-                        android:textColor="#FF343F4B"
-                        android:textSize="18sp"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintStart_toStart="parent"
-                        app:layout_constraintTop_toBottomOf="@id/bt_save_register"
-                        tools:ignore="RtlHardcoded" />
 
                 </com.google.android.material.card.MaterialCardView>
 

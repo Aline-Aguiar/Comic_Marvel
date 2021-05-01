@@ -7,4 +7,7 @@
     <string name="hint_login_pass">Password</string>
     <string name="login_create_account">Create account</string>
     <string name="ckb_login_remember">Remember</string>
+    <string name="register_save">SAVE</string>
+    <string name="login">LOG IN</string>
+    <string name="name_register">Name</string>
 </resources>
