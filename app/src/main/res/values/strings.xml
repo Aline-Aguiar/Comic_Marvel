@@ -10,4 +10,7 @@
     <string name="register_save">SAVE</string>
     <string name="login">LOG IN</string>
     <string name="name_register">Name</string>
+    <string name="detail_published_label">Published:</string>
+    <string name="detail_price_label">Price:</string>
+    <string name="detail_pages_label">Pages:</string>
 </resources>
