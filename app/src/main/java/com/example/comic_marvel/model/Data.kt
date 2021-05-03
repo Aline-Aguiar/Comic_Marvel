@@ -1,0 +1,9 @@
+package com.example.comic_marvel.model
+
+data class Data(
+    val count: Int,
+    val limit: Int,
+    val offset: Int,
+    val results: List<Result>,
+    val total: Int
+)
