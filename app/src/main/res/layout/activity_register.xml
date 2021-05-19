@@ -21,8 +21,8 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:src="@drawable/ic_baseline_arrow_back_24"
-            app:layout_constraintStar_toStartOf="parent"
-            app:layout_contraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -32,8 +32,8 @@
             android:textColor="@color/white"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintStar_toEndOf="@+id/register_arrow"
-            app:layout_contraintTop_toTopOf="parent"/>
+            app:layout_constraintStart_toEndOf="@+id/register_arrow"
+            app:layout_constraintTop_toTopOf="parent"/>
 
     </androidx.appcompat.widget.Toolbar>
 
@@ -146,7 +146,7 @@
                         app:layout_constraintTop_toBottomOf="@id/til_name_register">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/tiet_register_email"
+                            android:id="@+id/tiet_login_register"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hint_login_email"
@@ -166,11 +166,11 @@
                         app:errorTextColor="@color/white"
                         app:layout_constraintEnd_toEndOf="parent"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toBottom="@id/til_email_register"
+                        app:layout_constraintTop_toBottomOf="@id/til_email_register"
                         app:passwordToggleEnabled="true">
 
                         <com.google.android.material.textfield.TextInputEditText
-                            android:id="@+id/tiet_login_password"
+                            android:id="@+id/tiet_register_password"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="@string/hint_login_pass"
@@ -180,7 +180,7 @@
                     </com.google.android.material.textfield.TextInputLayout>
 
                     <com.google.android.material.button.MaterialButton
-                        android:id="@+id/bt_save_register"
+                        android:id="@+id/bt_save"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginHorizontal="10dp"

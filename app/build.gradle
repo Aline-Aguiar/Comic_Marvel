@@ -51,6 +51,7 @@ dependencies {
     implementation "android.arch.lifecycle:extensions:1.1.1"
     implementation 'com.squareup.okhttp3:okhttp:4.2.2'
     implementation 'com.squareup.okhttp3:logging-interceptor:4.2.2'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
 
     //dependências adicionadas necessárias para este projeto
 

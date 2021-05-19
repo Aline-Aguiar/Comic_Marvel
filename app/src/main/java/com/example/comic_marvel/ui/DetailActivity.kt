@@ -1,5 +1,6 @@
 package com.example.comic_marvel.ui
 
+import android.content.Intent
 import android.icu.number.NumberRangeFormatter.with
 import android.os.Bundle
 import android.widget.ImageView
@@ -39,6 +40,12 @@ class DetailActivity: AppCompatActivity() {
 
         btArrowDetail.setOnClickListener {
             onBackPressed()
+        }
+
+        imgComic.setOnClickListener {
+            val intent = Intent(it.context, DetailActivity::class.java)
+            intent.putExtra("COMICS",infoDetail)
+            it.context.startActivity(intent)
         }
     }
 }
